@@ -1,0 +1,60 @@
+*.iml
+.gradle
+.idea
+.DS_Store
+build
+captures
+.externalNativeBuild
+.cxx
+local.properties
+xcuserdata
+
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/build
+/captures
+
+
+#Android
+*.apk
+*.ap_
+
+#Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
+
+
+# Log Files
+*.log
+
+# Android Studio captures folder
+captures/
+
+#Mac os X files
+.DS
+*.DS
+
+.idea/
+.iml
+*.hprof
+*.DS_Store
+
+#Compiles
+/app/release/*
+/app/build/*
+/build/*
