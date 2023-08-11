@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
+    id("dagger.hilt.android.plugin")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -46,4 +48,26 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.4.0")
     implementation("androidx.compose.material:material:1.4.0")
     implementation("androidx.activity:activity-compose:1.7.0")
+
+    implementation("com.google.android.material:material:1.6.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.2.0")
+    implementation("com.airbnb.android:lottie-compose:4.2.1")
+    implementation("androidx.compose.material:material-icons-extended:1.2.0")
+    implementation("androidx.navigation:navigation-compose:2.4.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+    implementation("androidx.compose.runtime:runtime-livedata:1.2.0")
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
+    //AndroidX
+    implementation("androidx.activity:activity-ktx:1.2.3")
+    implementation("androidx.fragment:fragment-ktx:1.3.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0")
+    implementation("com.google.dagger:hilt-android:2.44")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("io.coil-kt:coil-compose:2.0.0")
+}
+
+kapt {
+    correctErrorTypes = true
 }
