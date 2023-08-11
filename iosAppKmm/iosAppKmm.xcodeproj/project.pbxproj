@@ -31,6 +31,7 @@
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		52D090632A8685FA008261BC /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		52D090712A86DFB3008261BC /* background_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_splash.png; path = ../../../../../Downloads/background_splash.png; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosAppKmm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosAppKmm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +94,7 @@
 				52D090612A8685CF008261BC /* ui */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
+				52D090712A86DFB3008261BC /* background_splash.png */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 			);
