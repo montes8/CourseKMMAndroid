@@ -5,7 +5,7 @@ import com.gb.vale.coursekmmandroid.repository.db.UserDataBase
 import com.gb.vale.coursekmmandroid.usecases.repository.db.IUserDataBase
 
 
-class UseUseCase() {
+class UseUseCase {
 
     private val iUserDataBase : IUserDataBase = UserDataBase()
 
@@ -14,6 +14,5 @@ class UseUseCase() {
     }
 
     suspend fun register(user : String , pass : String,token :String):Boolean = iUserDataBase.insertUser(UserModel(0,user,pass,token))
-
 
 }

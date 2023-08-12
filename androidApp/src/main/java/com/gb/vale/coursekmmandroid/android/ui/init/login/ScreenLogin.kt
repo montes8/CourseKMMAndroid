@@ -1,6 +1,5 @@
 package com.gb.vale.coursekmmandroid.android.ui.init.login
 
-import android.app.Activity
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -40,7 +39,6 @@ import kotlinx.coroutines.flow.collectLatest
 @Composable
 fun ScreenLogin(viewModel: UserViewModel,navController: NavController) {
     val context = LocalContext.current
-    val activity = (LocalContext.current as? Activity)
 
     var text by remember { mutableStateOf("") }
     var textPass by remember { mutableStateOf("") }

@@ -6,7 +6,7 @@ import com.gb.vale.coursekmmandroid.usecases.repository.db.IUserDataBase
 import database.UserEntity
 import database.UserKmmQueries
 
-class UserDataBase( private val queries: UserKmmQueries = databaseDriverFactory().userKmmQueries):
+class UserDataBase(private val queries: UserKmmQueries = databaseDriverFactory().userKmmQueries):
     IUserDataBase {
 
     override suspend fun insertUser(user: UserModel) :Boolean{
