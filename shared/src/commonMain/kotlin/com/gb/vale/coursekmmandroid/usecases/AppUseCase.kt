@@ -1,8 +1,8 @@
 package com.gb.vale.coursekmmandroid.usecases
 
 import com.gb.vale.coursekmmandroid.manager.PreferenceManager
-import com.gb.vale.coursekmmandroid.repository.AppPreferences
-import com.gb.vale.coursekmmandroid.utils.EMPTY
+import com.gb.vale.coursekmmandroid.repository.preferences.AppPreferences
+import com.gb.vale.coursekmmandroid.usecases.repository.preference.IAppPreferences
 
 
 class AppUseCase(private val context: PreferenceManager) {

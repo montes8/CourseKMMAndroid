@@ -1,30 +1,31 @@
-CREATE TABLE  userEnttity(
+CREATE TABLE  userEntity(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    pass TEXT NOT NULL
+    pass TEXT NOT NULL,
+    token TEXT NOT NULL
 );
 
 selectAllUser:
 SELECT *
-FROM userEnttity;
+FROM userEntity;
 
 
 getUserById:
 SELECT *
-FROM userEnttity
+FROM userEntity
 WHERE id = ?;
 
 getUserByActive:
 SELECT *
-FROM userEnttity
+FROM userEntity
 WHERE name = ? AND pass = ?;
 
 insertUser:
 INSERT OR REPLACE
-INTO userEnttity(
-     name,pass
-) VALUES(?, ?);
+INTO userEntity(
+     name,pass,token
+) VALUES(?, ?,?);
 
 deleteNoteById:
-DELETE FROM userEnttity
+DELETE FROM userEntity
 WHERE id = ?;

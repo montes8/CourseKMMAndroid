@@ -1,9 +1,9 @@
-package com.gb.vale.coursekmmandroid.repository
+package com.gb.vale.coursekmmandroid.repository.preferences
 
 import com.gb.vale.coursekmmandroid.manager.PreferenceManager
 import com.gb.vale.coursekmmandroid.manager.getString
 import com.gb.vale.coursekmmandroid.manager.setString
-import com.gb.vale.coursekmmandroid.usecases.IAppPreferences
+import com.gb.vale.coursekmmandroid.usecases.repository.preference.IAppPreferences
 import com.gb.vale.coursekmmandroid.utils.PREFERENCE_TOKEN
 
 

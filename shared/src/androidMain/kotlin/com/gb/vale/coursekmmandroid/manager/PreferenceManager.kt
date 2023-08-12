@@ -1,11 +1,13 @@
 package com.gb.vale.coursekmmandroid.manager
 
 import android.app.Activity
+import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 
 
 actual typealias PreferenceManager = Activity
+
 
 actual fun PreferenceManager.getInt(key: String ) : Int{
     val prefs: SharedPreferences = this.getSharedPreferences("", MODE_PRIVATE)

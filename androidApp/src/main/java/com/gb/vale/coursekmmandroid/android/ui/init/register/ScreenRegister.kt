@@ -1,9 +1,7 @@
-package com.gb.vale.coursekmmandroid.android.ui.init.login
+package com.gb.vale.coursekmmandroid.android.ui.init.register
 
-import android.app.Activity
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
@@ -20,52 +18,43 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.gb.vale.coursekmmandroid.android.R
-import com.gb.vale.coursekmmandroid.android.component.Screen
 import com.gb.vale.coursekmmandroid.android.component.toast
-import com.gb.vale.coursekmmandroid.android.ui.home.HomeActivity
 import com.gb.vale.coursekmmandroid.android.ui.init.InitUiEvent
-import com.gb.vale.coursekmmandroid.android.ui.init.splash.SplashViewModel
+import com.gb.vale.coursekmmandroid.android.ui.init.login.UserViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun ScreenLogin(viewModel: UserViewModel,navController: NavController) {
-    val context = LocalContext.current
-    val activity = (LocalContext.current as? Activity)
+fun ScreenRegister (viewModel: UserViewModel, navController: NavController) {
 
+    val context = LocalContext.current
     var text by remember { mutableStateOf("") }
     var textPass by remember { mutableStateOf("") }
     var visibility by remember { mutableStateOf(false) }
     var revealPassword by remember { mutableStateOf(false) }
     val keyboardController = LocalSoftwareKeyboardController.current
 
-
     LaunchedEffect(key1 = true) {
         viewModel.eventFlow.collectLatest { event ->
             when (event) {
-                is InitUiEvent.NavigateToRegister -> {
-                    navController.navigate(Screen.RegisterScreen.route)
-                }
-                is InitUiEvent.NavigateToHome -> {
-                    if (event.success)HomeActivity.newInstance(context)
+                is InitUiEvent.NavigateToSuccess -> {
+                    navController.popBackStack()
                 }
                 else -> {}
             }
         }
     }
 
-    if (viewModel.uiToast) {
-        context.toast("Usuario incorrecto")
-        viewModel.uiToast = false
+    if (viewModel.uiToastRegister) {
+        context.toast("Usuario Registrado")
+        viewModel.uiToastRegister = false
     }
 
     Column(
@@ -142,18 +131,9 @@ fun ScreenLogin(viewModel: UserViewModel,navController: NavController) {
             border = BorderStroke(1.dp, Color.Black),
             colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
             onClick = {
-                viewModel.login(text,textPass)
+                viewModel.register(text,textPass)
             }) {
-            Text(text = "Iniciar sesión", color = Color.White)
+            Text(text = "Registrarse", color = Color.White)
         }
-
-        Text(modifier = Modifier.padding(top = 32.dp).clickable { viewModel.nextRegister()},
-            text = "Crear cuenta", color = Color.Blue,
-            fontWeight = FontWeight.Bold,
-            fontSize = 20.sp,
-            style = MaterialTheme.typography.body1
-        )
-
     }
-
 }
