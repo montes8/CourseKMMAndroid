@@ -19,7 +19,7 @@ actual fun PreferenceManager.getString(key: String) : String {
 }
 
 actual fun PreferenceManager.setString(key: String, value : String){
-    NSUserDefaults.standardUserDefaults.setString(value,key)
+    NSUserDefaults.standardUserDefaults.setObject(value,key)
 }
 
 actual fun PreferenceManager.getBoolean(key: String) : Boolean {

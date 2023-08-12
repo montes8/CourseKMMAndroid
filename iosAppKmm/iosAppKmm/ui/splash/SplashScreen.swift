@@ -7,16 +7,25 @@
 //
 
 import SwiftUI
+import shared
 
 struct SplashScreen: View {
     
+    @ObservedObject var splashViewModel = SplashViewModel()
+    
     var body: some View {
-      //  Color.green.edgesIgnoringSafeArea(.all)
+        
         NavigationView {
             VStack(spacing: 16) {
                 Text("FOOD MERIA").font(.system(size: 25,weight: .bold)).foregroundColor(.white)
                 Text("BIENVENIDOS").font(.system(size: 20,weight: .bold)) .foregroundColor(.white)
                 Text("HAS TU PEDIDO AHORA").font(.system(size: 20,weight: .bold)) .foregroundColor(.white)
+                
+                if splashViewModel.successToken{
+                                     DelayedNavigationLink(delay: .seconds(3)) {HomeScreem()}
+                                 }else{
+                                     DelayedNavigationLink(delay: .seconds(3)) {LoginScreen()}
+                                  }
                 
             }.frame(
                 maxWidth: .infinity,
