@@ -25,7 +25,6 @@ class SplashViewModel(context : Activity): BaseViewModel()  {
     fun saveToken(){
         execute {
             appUseCase.saveToken("gfergfre")
-
         }
     }
 }

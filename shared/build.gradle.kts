@@ -96,8 +96,8 @@ android {
 }
 
 sqldelight {
-    database("MyAppDb") {
-        packageName = "com.example.mytestkmm.cache"
+    database("CourseKmmDb") {
+        packageName = "com.gb.vale.coursekmmandroid.database"
         sourceFolders = listOf("sqldelight")
     }
 }

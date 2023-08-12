@@ -1,0 +1,30 @@
+CREATE TABLE  userEnttity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    pass TEXT NOT NULL
+);
+
+selectAllUser:
+SELECT *
+FROM userEnttity;
+
+
+getUserById:
+SELECT *
+FROM userEnttity
+WHERE id = ?;
+
+getUserByActive:
+SELECT *
+FROM userEnttity
+WHERE name = ? AND pass = ?;
+
+insertUser:
+INSERT OR REPLACE
+INTO userEnttity(
+     name,pass
+) VALUES(?, ?);
+
+deleteNoteById:
+DELETE FROM userEnttity
+WHERE id = ?;
