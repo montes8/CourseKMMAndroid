@@ -37,7 +37,6 @@ fun ScreenSplash(viewModel: SplashViewModel,navController: NavController){
 
             when (event) {
                 is InitUiEvent.NavigateToNext -> {
-                    context.toastGeneric(event.value.toString())
                     if (event.value){
                         HomeActivity.newInstance(context)
                     }else{
