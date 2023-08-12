@@ -2,6 +2,7 @@ package com.gb.vale.coursekmmandroid.android.ui.init.login
 
 import android.app.Activity
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -46,7 +47,7 @@ fun ScreenLogin(navController: NavController) {
 
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier  = Modifier.fillMaxSize().background(Color.White),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
