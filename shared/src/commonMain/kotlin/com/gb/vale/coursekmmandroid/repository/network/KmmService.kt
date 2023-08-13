@@ -9,9 +9,9 @@ import io.ktor.client.request.*
 
 class KmmService : KtorApi() {
 
-    suspend fun getRecipes(): List<RecipeResponse> = client.get("") {
+    suspend fun getRecipes(): List<RecipeResponse> = client.get{
         pathUrlGet("user/loadRecipes")
-    }.validateData()
+    }.body()
 
     suspend fun saveRecipes(): List<RecipeResponse> = client.get {
         pathUrlPost("service/user/loadRecipes", RecipeModel())

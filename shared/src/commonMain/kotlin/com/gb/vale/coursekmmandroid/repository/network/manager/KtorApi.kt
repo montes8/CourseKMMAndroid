@@ -1,8 +1,6 @@
 package com.gb.vale.coursekmmandroid.repository.network.manager
 
-import com.gb.vale.coursekmmandroid.utils.errorMapper
 import io.ktor.client.*
-import io.ktor.client.plugins.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -18,13 +16,6 @@ abstract class KtorApi {
                 ignoreUnknownKeys = true
                 useAlternativeNames = false
             })
-        }
-
-        expectSuccess = true
-        HttpResponseValidator {
-            handleResponseExceptionWithRequest { exception, _ ->
-                errorMapper(exception)
-            }
         }
     }
 

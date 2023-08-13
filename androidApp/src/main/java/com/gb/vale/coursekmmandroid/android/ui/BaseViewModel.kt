@@ -13,6 +13,7 @@ open class BaseViewModel : ViewModel() {
             try {
                 func()
             }catch (ex:Throwable){
+
             }
         }
     }
