@@ -40,8 +40,8 @@ import kotlinx.coroutines.flow.collectLatest
 fun ScreenLogin(viewModel: UserViewModel,navController: NavController) {
     val context = LocalContext.current
 
-    var text by remember { mutableStateOf("") }
-    var textPass by remember { mutableStateOf("") }
+    var text by remember { mutableStateOf("Tayler") }
+    var textPass by remember { mutableStateOf("Tayler") }
     var visibility by remember { mutableStateOf(false) }
     var revealPassword by remember { mutableStateOf(false) }
     val keyboardController = LocalSoftwareKeyboardController.current
